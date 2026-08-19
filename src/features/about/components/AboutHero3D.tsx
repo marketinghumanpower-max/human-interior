@@ -655,7 +655,7 @@ export const AboutHero3D: React.FC = () => {
                 ✕
               </button>
             </div>
-            <h4 className="font-display text-sm font-normal text-[#F3EFE7] mb-1.5 tracking-[-0.01em]">
+            <h4 className="card-title text-sm text-[#F3EFE7] mb-1.5">
               {activeHotspot.title}
             </h4>
             <p className="font-body text-xs text-[#AAA49A] leading-[1.65] font-normal">
@@ -677,7 +677,7 @@ export const AboutHero3D: React.FC = () => {
             <div className="flex items-center justify-between border-b border-[#C6A15B]/20 pb-3">
               <div>
                 <span className="text-[10px] uppercase text-[#C6A15B] font-body">{viewer3D.productCode}</span>
-                <h5 className="font-display text-sm text-[#F3EFE7] font-normal">{viewer3D.productTitle}</h5>
+                <h5 className="card-title text-sm text-[#F3EFE7]">{viewer3D.productTitle}</h5>
               </div>
               <button onClick={() => setShowSpecs(false)} className="text-[#AAA49A] hover:text-[#F3EFE7]">
                 ✕

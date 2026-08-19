@@ -64,7 +64,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               <span className="font-body text-[11px] font-medium text-[#C6A15B] uppercase tracking-[0.22em] block mb-1">
                 {project.categoryLabel} • {project.estimatedPrice}
               </span>
-              <h2 className="font-display text-2xl md:text-3xl font-normal text-[#F3EFE7] tracking-[-0.02em]">
+              <h2 className="card-title text-2xl md:text-3xl text-[#F3EFE7]">
                 {project.title}
               </h2>
             </div>
@@ -160,7 +160,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     <span className="font-body text-[11px] font-medium uppercase text-[#C6A15B] tracking-[0.22em] block">
                       {projectsContent.modal.shopLookEyebrow}
                     </span>
-                    <h3 className="font-display text-xl font-normal text-[#F3EFE7] tracking-[-0.015em]">
+                    <h3 className="heading-md text-xl text-[#F3EFE7]">
                       {projectsContent.modal.shopLookTitle}
                     </h3>
                   </div>
@@ -191,14 +191,14 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                           <span className="font-body text-[11px] uppercase font-medium text-[#C6A15B] tracking-[0.2em] block">
                             {item.categoryLabel}
                           </span>
-                          <h4 className="font-display text-sm font-normal text-[#F3EFE7] truncate mb-1 tracking-[-0.01em]">
+                          <h4 className="card-title text-sm text-[#F3EFE7] truncate mb-1">
                             {item.name}
                           </h4>
                           <p className="font-body text-[11px] text-[#AAA49A] line-clamp-1 mb-1.5 font-normal">
                             {item.material}
                           </p>
                           <div className="flex items-center justify-between">
-                            <span className="font-display text-sm font-normal text-[#DEC27B]">
+                            <span className="font-display text-sm font-medium text-[#DEC27B]">
                               {item.price}
                             </span>
                             <button
@@ -251,7 +251,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
             {/* Description & Story */}
             <div>
-              <h3 className="font-display text-xl font-normal text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2 tracking-[-0.015em]">
+              <h3 className="heading-md text-xl text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2">
                 {projectsContent.modal.conceptTitle}
               </h3>
               <p className="font-body text-sm text-[#AAA49A] font-normal leading-[1.65]">
@@ -262,7 +262,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             {/* Project Highlights */}
             {project.highlights.length > 0 && (
               <div>
-                <h3 className="font-display text-xl font-normal text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2 tracking-[-0.015em]">
+                <h3 className="heading-md text-xl text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2">
                   {projectsContent.modal.highlightsTitle}
                 </h3>
                 <ul className="space-y-2">
@@ -279,7 +279,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             {/* Materials Used */}
             {project.materials.length > 0 && (
               <div>
-                <h3 className="font-display text-xl font-normal text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2 tracking-[-0.015em]">
+                <h3 className="heading-md text-xl text-[#DEC27B] mb-3 border-b border-[#C6A15B]/15 pb-2">
                   {projectsContent.modal.materialsTitle}
                 </h3>
                 <div className="flex flex-wrap gap-2 font-body">

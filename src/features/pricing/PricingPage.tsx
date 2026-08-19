@@ -82,25 +82,25 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <AnimatedSection>
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/10 eyebrow text-[#DEC27B] mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#DEC27B]/40 bg-[#C6A15B]/15 eyebrow text-[#EDDAA2] text-xs font-semibold mb-6 uppercase tracking-[0.2em]">
             {hero.eyebrow}
           </span>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <h1 className="display-lg text-[#F3EFE7] font-normal leading-[1.08] mb-4 tracking-[-0.025em]">
+          <h1 className="display-lg text-[#F5F1E8] leading-[1.05] mb-4 tracking-[-0.01em]">
             {hero.title}
           </h1>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <p className="body-lg text-[#C6A15B] font-medium mb-6">
+          <p className="body-lg text-[#EDDAA2] font-semibold text-lg md:text-xl mb-6">
             {hero.subtitle}
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={300}>
-          <p className="body-md text-[#AAA49A] max-w-3xl mx-auto mb-10 font-normal">
+          <p className="body-md text-[#D1D5DB] max-w-3xl mx-auto mb-10 font-normal text-base md:text-lg leading-relaxed">
             {hero.description}
           </p>
         </AnimatedSection>
@@ -110,7 +110,7 @@ const HeroSection = () => {
             href={hero.zaloLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary button-text"
+            className="btn-primary button-text font-semibold flex items-center gap-2"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.39A9.954 9.954 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm.05 16.5c-1.46 0-2.85-.38-4.06-1.05l-.29-.16-3 0.84.84-2.92-.19-.31A7.95 7.95 0 014.05 12c0-4.38 3.57-7.95 7.95-7.95 4.38 0 7.95 3.57 7.95 7.95 0 4.38-3.57 7.95-7.9 7.95z" />
@@ -119,7 +119,7 @@ const HeroSection = () => {
           </a>
           <a
             href="#du-toan-tinh-nhanh"
-            className="btn-secondary button-text"
+            className="btn-secondary button-text font-semibold"
           >
             Tính Giá Dự Toán Nhanh
           </a>
@@ -127,13 +127,13 @@ const HeroSection = () => {
 
         {/* Stats Grid */}
         <AnimatedSection delay={500}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#262626] border border-[#262626] overflow-hidden rounded-sm shadow-2xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#333] border border-[#333] overflow-hidden rounded-lg shadow-2xl">
             {hero.stats.map((stat, idx) => (
-              <div key={idx} className="bg-[#111111] p-6 text-center hover:bg-[#161616] transition-colors duration-300">
-                <span className="block display-lg text-[#DEC27B] font-normal mb-1">
+              <div key={idx} className="bg-[#141414] p-6 text-center hover:bg-[#1A1A1A] transition-colors duration-300">
+                <span className="block display-lg text-[#EDDAA2] font-bold text-3xl mb-1">
                   {stat.number}
                 </span>
-                <span className="eyebrow text-[#8A8478]">
+                <span className="eyebrow text-[#D1D5DB] text-xs font-semibold">
                   {stat.label}
                 </span>
               </div>
@@ -152,14 +152,12 @@ const QuickEstimatorSection = () => {
   const [materialTier, setMaterialTier] = useState('melamine')
 
   const calculation = useMemo(() => {
-    // Base design cost per m2
     let designCostPerM2 = 160000
     if (propertyType === 'townhouse') designCostPerM2 = 200000
     if (propertyType === 'villa') designCostPerM2 = 250000
 
     const rawDesignCost = area * designCostPerM2
 
-    // Material multiplier per m2 for construction estimate
     let constructionMultiplier = 2100000
     if (materialTier === 'laminate') constructionMultiplier = 2800000
     if (materialTier === 'acrylic') constructionMultiplier = 3600000
@@ -180,16 +178,16 @@ const QuickEstimatorSection = () => {
   }
 
   return (
-    <section id="du-toan-tinh-nhanh" className="py-24 bg-[#0A0A0A] relative border-t border-[#1F1F1F]">
+    <section id="du-toan-tinh-nhanh" className="py-24 bg-[#0A0A0A] relative border-t border-[#222]">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center mb-14">
-          <span className="inline-block eyebrow text-[#C6A15B] mb-3">
-            BỘ TÍNH GIÁ & MÔ HÌNH 3D THÔNG MINH
+          <span className="inline-block eyebrow text-[#EDDAA2] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            BỘ TÍNH GIÁ &amp; MÔ HÌNH 3D THÔNG MINH
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
-            Dự Toán Ngân Sách & Trải Nghiệm Vật Liệu 3D
+          <h2 className="display-lg text-[#F5F1E8] mb-3 tracking-[0.01em] uppercase leading-[1.05]">
+            Dự Toán Ngân Sách &amp; Trải Nghiệm Vật Liệu 3D
           </h2>
-          <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
+          <p className="body-md text-[#D1D5DB] max-w-xl mx-auto font-normal text-base leading-relaxed">
             Lựa chọn loại công trình, diện tích và vật liệu để xem chi phí ước tính tức thì cùng mô hình 3D tương tác
           </p>
         </AnimatedSection>
@@ -198,10 +196,10 @@ const QuickEstimatorSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Column: Estimator Controls & Result Summary */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="bg-[#121212] border border-[#C6A15B]/30 p-6 md:p-8 shadow-2xl space-y-6">
+              <div className="bg-[#141414] border border-[#C6A15B]/30 p-6 md:p-8 rounded-xl shadow-2xl space-y-6">
                 {/* 1. Property Type */}
                 <div>
-                  <label className="block eyebrow text-[#C6A15B] mb-3">
+                  <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-3">
                     1. Chọn Loại Hình Công Trình
                   </label>
                   <div className="grid grid-cols-3 gap-2.5">
@@ -214,10 +212,10 @@ const QuickEstimatorSection = () => {
                         key={item.id}
                         type="button"
                         onClick={() => setPropertyType(item.id)}
-                        className={`p-3 text-center button-text transition-all ${
+                        className={`p-3 text-center button-text rounded-md transition-all font-semibold ${
                           propertyType === item.id
-                            ? 'bg-[#C6A15B] text-[#0A0A0A] border-[#C6A15B] shadow-md'
-                            : 'bg-[#0A0A0A] text-[#8A8478] border-[#262626] hover:border-[#C6A15B]/50'
+                            ? 'bg-[#EDDAA2] text-[#0A0A0A] border-[#EDDAA2] shadow-md font-bold'
+                            : 'bg-[#0A0A0A] text-[#D1D5DB] border-[#333] hover:border-[#EDDAA2]'
                         }`}
                       >
                         {item.label}
@@ -229,10 +227,10 @@ const QuickEstimatorSection = () => {
                 {/* 2. Area Input */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <label className="eyebrow text-[#C6A15B]">
+                    <label className="eyebrow text-[#EDDAA2] text-xs font-semibold">
                       2. Diện Tích Sàn Sử Dụng
                     </label>
-                    <span className="heading-md text-[#F3EFE7]">
+                    <span className="heading-md text-[#F5F1E8] font-bold text-xl">
                       {area} m²
                     </span>
                   </div>
@@ -243,9 +241,9 @@ const QuickEstimatorSection = () => {
                     step="5"
                     value={area}
                     onChange={(e) => setArea(Number(e.target.value))}
-                    className="w-full h-2 bg-[#1A1A1A] rounded-lg appearance-none cursor-pointer accent-[#C6A15B]"
+                    className="w-full h-2.5 bg-[#222] rounded-lg appearance-none cursor-pointer accent-[#EDDAA2]"
                   />
-                  <div className="flex justify-between caption text-[#555] mt-1 font-body">
+                  <div className="flex justify-between caption text-[#9CA3AF] mt-1 font-body text-xs">
                     <span>30 m²</span>
                     <span>150 m²</span>
                     <span>350 m²</span>
@@ -254,7 +252,7 @@ const QuickEstimatorSection = () => {
 
                 {/* 3. Material Tier */}
                 <div>
-                  <label className="block eyebrow text-[#C6A15B] mb-3">
+                  <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-3">
                     3. Chọn Gói Vật Liệu Chủ Đạo
                   </label>
                   <div className="grid grid-cols-2 gap-2.5">
@@ -268,10 +266,10 @@ const QuickEstimatorSection = () => {
                         key={item.id}
                         type="button"
                         onClick={() => setMaterialTier(item.id)}
-                        className={`p-3 text-left body-md text-xs border transition-all ${
+                        className={`p-3 text-left body-md text-xs sm:text-sm rounded-md border transition-all ${
                           materialTier === item.id
-                            ? 'bg-[#C6A15B]/15 text-[#F3EFE7] border-[#C6A15B] font-medium shadow-md'
-                            : 'bg-[#0A0A0A] text-[#8A8478] border-[#262626] hover:border-[#C6A15B]/40'
+                            ? 'bg-[#C6A15B]/25 text-[#F5F1E8] border-[#EDDAA2] font-semibold shadow-md'
+                            : 'bg-[#0A0A0A] text-[#D1D5DB] border-[#333] hover:border-[#DEC27B]'
                         }`}
                       >
                         {item.label}
@@ -282,22 +280,22 @@ const QuickEstimatorSection = () => {
               </div>
 
               {/* Calculation Result Output Card */}
-              <div className="bg-[#121212] border border-[#C6A15B]/40 p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+              <div className="bg-[#141414] border border-[#DEC27B]/50 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
                 <div className="flex-1">
-                  <span className="eyebrow text-[#C6A15B] block mb-1">
+                  <span className="eyebrow text-[#EDDAA2] text-xs font-semibold block mb-1">
                     DỰ TOÁN THI CÔNG NỘI THẤT TRỌN GÓI
                   </span>
-                  <div className="display-lg text-[#DEC27B] font-normal">
+                  <div className="display-lg text-[#EDDAA2] font-bold text-3xl md:text-4xl">
                     {Math.round(calculation.estimatedConstructionMin / 1000000)} - {Math.round(calculation.estimatedConstructionMax / 1000000)} Triệu VNĐ
                   </div>
-                  <p className="caption text-[#8A8478] mt-1">
-                    Phí thiết kế 3D: <span className="line-through text-[#666]">{formatVND(calculation.rawDesignCost)}</span> <span className="text-[#C6A15B] font-medium uppercase ml-1">(Miễn phí 100% khi thi công)</span>
+                  <p className="caption text-[#D1D5DB] text-xs sm:text-sm mt-1">
+                    Phí thiết kế 3D: <span className="line-through text-[#9CA3AF]">{formatVND(calculation.rawDesignCost)}</span> <span className="text-[#EDDAA2] font-semibold uppercase ml-1">(Miễn phí 100% khi thi công)</span>
                   </p>
                 </div>
 
                 <a
                   href="#bao-gia-form"
-                  className="btn-primary button-text w-full sm:w-auto text-center block whitespace-nowrap"
+                  className="btn-primary button-text w-full sm:w-auto text-center block whitespace-nowrap font-semibold"
                 >
                   Nhận Báo Giá Mẫu Này
                 </a>
@@ -325,49 +323,49 @@ const PricingTablesSection = () => {
   const [activeTab, setActiveTab] = useState<'design' | 'construction' | 'units'>('construction')
 
   return (
-    <section className="py-24 bg-[#0D0D0D] relative border-t border-[#1F1F1F]">
+    <section className="py-24 bg-[#0D0D0D] relative border-t border-[#222]">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center mb-12">
-          <span className="inline-block eyebrow text-[#C6A15B] mb-3">
+          <span className="inline-block eyebrow text-[#EDDAA2] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             BẢNG GIÁ NIÊM YẾT CHI TIẾT
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
-            Tra Cứu Báo Giá Thiết Kế & Thi Công
+          <h2 className="display-lg text-[#F5F1E8] mb-3 tracking-[0.01em] uppercase leading-[1.05]">
+            Tra Cứu Báo Giá Thiết Kế &amp; Thi Công
           </h2>
-          <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
+          <p className="body-md text-[#D1D5DB] max-w-xl mx-auto font-normal text-base leading-relaxed">
             Chọn danh mục bên dưới để xem báo giá trọn gói hoặc đơn giá từng hạng mục gỗ An Cường
           </p>
         </AnimatedSection>
 
         {/* Tabs Switcher */}
         <AnimatedSection delay={100} className="flex justify-center mb-14">
-          <div className="inline-flex bg-[#121212] border border-[#262626] p-1.5 space-x-1 font-body">
+          <div className="inline-flex bg-[#141414] border border-[#333] p-1.5 space-x-1 rounded-lg font-body">
             <button
               onClick={() => setActiveTab('construction')}
-              className={`px-6 py-3 button-text transition-all ${
+              className={`px-6 py-3 button-text rounded-md transition-all font-semibold ${
                 activeTab === 'construction'
-                  ? 'bg-[#C6A15B] text-[#0A0A0A]'
-                  : 'text-[#8A8478] hover:text-[#F3EFE7]'
+                  ? 'bg-[#EDDAA2] text-[#0A0A0A] font-bold'
+                  : 'text-[#D1D5DB] hover:text-[#FFFFFF]'
               }`}
             >
               1. Thi Công Trọn Gói (Căn Hộ / Nhà Phố)
             </button>
             <button
               onClick={() => setActiveTab('design')}
-              className={`px-6 py-3 button-text transition-all ${
+              className={`px-6 py-3 button-text rounded-md transition-all font-semibold ${
                 activeTab === 'design'
-                  ? 'bg-[#C6A15B] text-[#0A0A0A]'
-                  : 'text-[#8A8478] hover:text-[#F3EFE7]'
+                  ? 'bg-[#EDDAA2] text-[#0A0A0A] font-bold'
+                  : 'text-[#D1D5DB] hover:text-[#FFFFFF]'
               }`}
             >
               2. Bảng Giá Thiết Kế 3D
             </button>
             <button
               onClick={() => setActiveTab('units')}
-              className={`px-6 py-3 button-text transition-all ${
+              className={`px-6 py-3 button-text rounded-md transition-all font-semibold ${
                 activeTab === 'units'
-                  ? 'bg-[#C6A15B] text-[#0A0A0A]'
-                  : 'text-[#8A8478] hover:text-[#F3EFE7]'
+                  ? 'bg-[#EDDAA2] text-[#0A0A0A] font-bold'
+                  : 'text-[#D1D5DB] hover:text-[#FFFFFF]'
               }`}
             >
               3. Đơn Giá Hạng Mục (m² / md)
@@ -381,25 +379,25 @@ const PricingTablesSection = () => {
             {constructionPricing.packages.map((pkg, idx) => (
               <AnimatedSection key={pkg.id} delay={idx * 100}>
                 <PricingPackage3DCard popular={idx === 1} className="h-full">
-                  <div className="h-full bg-[#121212] border border-[#222] p-8 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all duration-300">
+                  <div className="h-full bg-[#141414] border border-[#333] p-8 rounded-xl flex flex-col justify-between hover:border-[#DEC27B] transition-all duration-300">
                     <div>
-                      <span className="eyebrow text-[#C6A15B] block mb-2 font-medium">
+                      <span className="eyebrow text-[#EDDAA2] text-xs font-semibold block mb-2">
                         {pkg.area}
                       </span>
-                      <h3 className="heading-md text-[#F3EFE7] mb-2 font-normal tracking-[-0.015em]">
+                      <h3 className="card-title text-xl text-[#F5F1E8] font-bold mb-2">
                         {pkg.title}
                       </h3>
-                      <div className="heading-md text-[#DEC27B] font-normal pb-4 border-b border-[#222] mb-6">
+                      <div className="heading-md text-[#EDDAA2] font-bold text-2xl pb-4 border-b border-[#222] mb-6">
                         {pkg.estimatedPrice}
                       </div>
 
-                      <p className="eyebrow text-[#777] mb-3">
+                      <p className="eyebrow text-[#D1D5DB] text-xs font-medium mb-3">
                         Hạng mục cốt lõi gồm:
                       </p>
                       <ul className="space-y-3 mb-8">
                         {pkg.items.map((item, iIdx) => (
-                          <li key={iIdx} className="flex items-start gap-2.5 body-md text-xs text-[#BBB4A8]">
-                            <svg className="w-4 h-4 text-[#C6A15B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                          <li key={iIdx} className="flex items-start gap-2.5 body-md text-sm text-[#D1D5DB]">
+                            <svg className="w-4 h-4 text-[#EDDAA2] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
                             {item}
@@ -410,7 +408,7 @@ const PricingTablesSection = () => {
 
                     <a
                       href="#bao-gia-form"
-                      className="btn-secondary button-text w-full text-center block"
+                      className="btn-secondary button-text w-full text-center block font-semibold"
                     >
                       Tư Vấn Gói Này
                     </a>
@@ -427,22 +425,22 @@ const PricingTablesSection = () => {
             {designPricing.packages.map((pkg, idx) => (
               <AnimatedSection key={pkg.id} delay={idx * 120}>
                 <PricingPackage3DCard popular={idx === 1} className="h-full">
-                  <div className="h-full bg-[#121212] border border-[#222] p-8 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all duration-300">
+                  <div className="h-full bg-[#141414] border border-[#333] p-8 rounded-xl flex flex-col justify-between hover:border-[#DEC27B] transition-all duration-300">
                     <div>
-                      <span className="inline-block px-3 py-1 bg-[#C6A15B]/15 text-[#C6A15B] eyebrow mb-4">
+                      <span className="inline-block px-3.5 py-1 bg-[#C6A15B]/20 text-[#EDDAA2] border border-[#DEC27B]/40 rounded-full eyebrow text-xs font-semibold mb-4">
                         {pkg.promo}
                       </span>
-                      <h3 className="heading-md text-[#F3EFE7] mb-2 font-normal tracking-[-0.015em]">
+                      <h3 className="card-title text-2xl text-[#F5F1E8] font-bold mb-2">
                         {pkg.name}
                       </h3>
-                      <div className="display-lg text-[#DEC27B] font-normal pb-4 border-b border-[#222] mb-6">
-                        {pkg.price} <span className="body-md text-sm text-[#888]">/ {pkg.unit}</span>
+                      <div className="display-lg text-[#EDDAA2] font-bold text-3xl pb-4 border-b border-[#222] mb-6">
+                        {pkg.price} <span className="body-md text-sm text-[#D1D5DB] font-normal">/ {pkg.unit}</span>
                       </div>
 
                       <ul className="space-y-3 mb-8">
                         {pkg.features.map((feat, fIdx) => (
-                          <li key={fIdx} className="flex items-start gap-2.5 body-md text-xs text-[#BBB4A8]">
-                            <svg className="w-4 h-4 text-[#C6A15B] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                          <li key={fIdx} className="flex items-start gap-2.5 body-md text-sm text-[#D1D5DB]">
+                            <svg className="w-4 h-4 text-[#EDDAA2] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
                             {feat}
@@ -453,7 +451,7 @@ const PricingTablesSection = () => {
 
                     <a
                       href="#bao-gia-form"
-                      className="btn-primary button-text w-full text-center block"
+                      className="btn-primary button-text w-full text-center block font-semibold"
                     >
                       Đăng Ký Thiết Kế
                     </a>
@@ -467,23 +465,23 @@ const PricingTablesSection = () => {
         {/* Tab 3: Unit Price Table */}
         {activeTab === 'units' && (
           <AnimatedSection>
-            <div className="bg-[#121212] border border-[#222] overflow-x-auto shadow-2xl">
-              <table className="w-full text-left font-body text-[14px]">
+            <div className="bg-[#141414] border border-[#333] rounded-xl overflow-x-auto shadow-2xl">
+              <table className="w-full text-left font-body text-sm md:text-base">
                 <thead>
-                  <tr className="bg-[#0A0A0A] border-b border-[#222] eyebrow text-[#C6A15B]">
+                  <tr className="bg-[#0A0A0A] border-b border-[#333] eyebrow text-[#EDDAA2] font-bold">
                     <th className="p-4 md:p-6">STT</th>
                     <th className="p-4 md:p-6">Hạng Mục Sản Xuất Nội Thất</th>
                     <th className="p-4 md:p-6">Đơn Vị Tính</th>
                     <th className="p-4 md:p-6 text-right">Đơn Giá Niêm Yết (VNĐ)</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#1F1F1F] text-[#DDD7CC]">
+                <tbody className="divide-y divide-[#222] text-[#D1D5DB]">
                   {unitPrices.items.map((item, idx) => (
-                    <tr key={idx} className="hover:bg-[#161616] transition-colors">
-                      <td className="p-4 md:p-6 caption text-[#777]">{idx + 1}</td>
-                      <td className="p-4 md:p-6 body-md font-medium text-[#F3EFE7]">{item.name}</td>
-                      <td className="p-4 md:p-6 caption text-[#999]">{item.unit}</td>
-                      <td className="p-4 md:p-6 text-right heading-md text-[#DEC27B] font-normal">{item.price}</td>
+                    <tr key={idx} className="hover:bg-[#1A1A1A] transition-colors">
+                      <td className="p-4 md:p-6 caption text-[#9CA3AF] font-medium">{idx + 1}</td>
+                      <td className="p-4 md:p-6 body-md font-semibold text-[#F5F1E8]">{item.name}</td>
+                      <td className="p-4 md:p-6 caption text-[#D1D5DB]">{item.unit}</td>
+                      <td className="p-4 md:p-6 text-right heading-md text-[#EDDAA2] font-bold">{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -501,13 +499,13 @@ const AdvantagesSection = () => {
   const { advantages, commitments } = pricingContent
 
   return (
-    <section className="py-24 bg-[#0A0A0A] relative border-t border-[#1F1F1F]">
+    <section className="py-24 bg-[#0A0A0A] relative border-t border-[#222]">
       <div className="max-w-7xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block eyebrow text-[#C6A15B] mb-3">
+          <span className="inline-block eyebrow text-[#EDDAA2] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             {advantages.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F5F1E8] mb-3 tracking-[0.01em] uppercase leading-[1.05]">
             {advantages.title}
           </h2>
         </AnimatedSection>
@@ -517,15 +515,15 @@ const AdvantagesSection = () => {
           {advantages.items.map((adv, idx) => (
             <AnimatedSection key={idx} delay={idx * 100}>
               <PricingPackage3DCard className="h-full">
-                <div className="h-full bg-[#121212] border border-[#222] p-7 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all duration-300">
+                <div className="h-full bg-[#141414] border border-[#333] p-7 rounded-xl flex flex-col justify-between hover:border-[#DEC27B] transition-all duration-300">
                   <div>
-                    <div className="w-10 h-10 rounded-full bg-[#C6A15B]/10 border border-[#C6A15B]/30 flex items-center justify-center text-[#C6A15B] font-display text-lg font-normal mb-6">
+                    <div className="w-10 h-10 rounded-full bg-[#C6A15B]/20 border border-[#DEC27B]/40 flex items-center justify-center text-[#EDDAA2] font-sans font-bold text-lg mb-6">
                       {idx + 1}
                     </div>
-                    <h3 className="heading-md text-[#F3EFE7] mb-3 leading-snug font-normal tracking-[-0.01em]">
+                    <h3 className="card-title text-xl text-[#F5F1E8] font-bold mb-3">
                       {adv.title}
                     </h3>
-                    <p className="body-md text-xs text-[#8A8478] leading-relaxed font-normal">
+                    <p className="body-md text-sm text-[#D1D5DB] leading-relaxed font-normal">
                       {adv.description}
                     </p>
                   </div>
@@ -537,23 +535,23 @@ const AdvantagesSection = () => {
 
         {/* Commitments Banner */}
         <AnimatedSection delay={200}>
-          <div className="bg-[#121212] border-l-4 border-[#C6A15B] p-8 md:p-10 bg-gradient-to-r from-[#121212] via-[#161616] to-[#121212]">
+          <div className="bg-[#141414] border-l-4 border-[#EDDAA2] p-8 md:p-10 rounded-r-xl bg-gradient-to-r from-[#141414] via-[#181818] to-[#141414] shadow-2xl">
             <div className="mb-8">
-              <span className="eyebrow text-[#C6A15B] block mb-1">
+              <span className="eyebrow text-[#EDDAA2] text-xs font-semibold block mb-1">
                 {commitments.eyebrow}
               </span>
-              <h3 className="heading-lg text-[#F3EFE7] font-normal tracking-[-0.015em]">
+              <h3 className="heading-lg text-[#F5F1E8] font-bold tracking-[-0.015em]">
                 {commitments.title}
               </h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {commitments.items.map((comm, idx) => (
-                <div key={idx} className="p-4 bg-[#0A0A0A] border border-[#222]">
-                  <h4 className="heading-md text-[#C6A15B] mb-2 font-normal">
+                <div key={idx} className="p-4 bg-[#0A0A0A] border border-[#333] rounded-lg">
+                  <h4 className="heading-md text-[#EDDAA2] mb-2 font-semibold text-base">
                     {comm.title}
                   </h4>
-                  <p className="body-md text-xs text-[#999] leading-relaxed font-normal">
+                  <p className="body-md text-xs sm:text-sm text-[#D1D5DB] leading-relaxed font-normal">
                     {comm.desc}
                   </p>
                 </div>
@@ -572,13 +570,13 @@ const FAQsSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="py-24 bg-[#0D0D0D] relative border-t border-[#1F1F1F]">
+    <section className="py-24 bg-[#0D0D0D] relative border-t border-[#222]">
       <div className="max-w-4xl mx-auto px-6">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block eyebrow text-[#C6A15B] mb-3">
+          <span className="inline-block eyebrow text-[#EDDAA2] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             {faqs.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F5F1E8] mb-3 tracking-[0.01em] uppercase leading-[1.05]">
             {faqs.title}
           </h2>
         </AnimatedSection>
@@ -586,22 +584,22 @@ const FAQsSection = () => {
         <div className="space-y-4">
           {faqs.items.map((faq, idx) => (
             <AnimatedSection key={idx} delay={idx * 70}>
-              <div className="bg-[#121212] border border-[#222] overflow-hidden transition-colors">
+              <div className="bg-[#141414] border border-[#333] rounded-lg overflow-hidden transition-colors">
                 <button
                   onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 heading-md text-[#F3EFE7] hover:text-[#DEC27B] transition-colors font-normal tracking-[-0.01em]"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 heading-md text-[#F5F1E8] hover:text-[#EDDAA2] transition-colors font-semibold text-base md:text-lg tracking-[-0.01em]"
                 >
                   <span className="flex items-center gap-3">
-                    <span className="eyebrow text-[#C6A15B]">Q{idx + 1}.</span>
+                    <span className="eyebrow text-[#EDDAA2] font-bold">Q{idx + 1}.</span>
                     {faq.question}
                   </span>
-                  <span className="text-[#C6A15B] text-xl font-normal flex-shrink-0">
+                  <span className="text-[#EDDAA2] text-xl font-bold flex-shrink-0">
                     {openIndex === idx ? '−' : '+'}
                   </span>
                 </button>
 
                 {openIndex === idx && (
-                  <div className="px-6 pb-6 pt-2 border-t border-[#1A1A1A] body-md text-[#AAA49A] leading-relaxed font-normal">
+                  <div className="px-6 pb-6 pt-2 border-t border-[#222] body-md text-[#D1D5DB] text-base leading-relaxed font-normal">
                     {faq.answer}
                   </div>
                 )}
@@ -634,33 +632,33 @@ const ConsultationFormSection = () => {
   }
 
   return (
-    <section id="bao-gia-form" className="py-24 bg-[#0A0A0A] relative border-t border-[#1F1F1F]">
+    <section id="bao-gia-form" className="py-24 bg-[#0A0A0A] relative border-t border-[#222]">
       <div className="max-w-4xl mx-auto px-6">
         <AnimatedSection className="text-center mb-12">
-          <span className="inline-block eyebrow text-[#C6A15B] mb-3">
+          <span className="inline-block eyebrow text-[#EDDAA2] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             {form.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F5F1E8] mb-3 tracking-[0.01em] uppercase leading-[1.05]">
             {form.title}
           </h2>
-          <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
+          <p className="body-md text-[#D1D5DB] max-w-xl mx-auto font-normal text-base leading-relaxed">
             {form.description}
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <div className="bg-[#121212] border border-[#C6A15B]/30 p-8 md:p-12 shadow-2xl relative">
+          <div className="bg-[#141414] border border-[#DEC27B]/40 p-8 md:p-12 rounded-xl shadow-2xl relative">
             {submitted ? (
               <div className="text-center py-12 space-y-4 font-body">
-                <div className="w-16 h-16 rounded-full bg-[#C6A15B]/20 border border-[#C6A15B] flex items-center justify-center mx-auto text-[#C6A15B]">
+                <div className="w-16 h-16 rounded-full bg-[#C6A15B]/20 border border-[#EDDAA2] flex items-center justify-center mx-auto text-[#EDDAA2]">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <h3 className="heading-lg text-[#F3EFE7] font-normal tracking-[-0.015em]">
+                <h3 className="card-title text-2xl text-[#F5F1E8] font-bold">
                   Đã Nhận Yêu Cầu Báo Giá!
                 </h3>
-                <p className="body-md text-[#AAA49A] max-w-md mx-auto font-normal">
+                <p className="body-md text-[#D1D5DB] max-w-md mx-auto font-normal text-base">
                   {form.successMessage}
                 </p>
                 <button
@@ -668,7 +666,7 @@ const ConsultationFormSection = () => {
                     setSubmitted(false)
                     setFormData({ name: '', phone: '', email: '', projectType: 'Căn hộ chung cư', area: '', notes: '' })
                   }}
-                  className="btn-secondary button-text mt-6"
+                  className="btn-secondary button-text mt-6 font-semibold"
                 >
                   Gửi Yêu Cầu Khác
                 </button>
@@ -677,7 +675,7 @@ const ConsultationFormSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6 font-body">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block eyebrow text-[#C6A15B] mb-2">
+                    <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
                       Họ và Tên Anh / Chị *
                     </label>
                     <input
@@ -686,12 +684,12 @@ const ConsultationFormSection = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Ví dụ: Nguyễn Văn A"
-                      className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                      className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] placeholder-[#9CA3AF] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                     />
                   </div>
 
                   <div>
-                    <label className="block eyebrow text-[#C6A15B] mb-2">
+                    <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
                       Số Điện Thoại (Zalo) *
                     </label>
                     <input
@@ -700,14 +698,14 @@ const ConsultationFormSection = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="Ví dụ: 0937 438 652"
-                      className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                      className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] placeholder-[#9CA3AF] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label className="block eyebrow text-[#C6A15B] mb-2">
+                    <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
                       Email (Nếu có)
                     </label>
                     <input
@@ -715,18 +713,18 @@ const ConsultationFormSection = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="email@domain.com"
-                      className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                      className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] placeholder-[#9CA3AF] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                     />
                   </div>
 
                   <div>
-                    <label className="block eyebrow text-[#C6A15B] mb-2">
+                    <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
                       Loại Công Trình
                     </label>
                     <select
                       value={formData.projectType}
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                      className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                     >
                       <option value="Căn hộ chung cư">Căn hộ / Chung cư</option>
                       <option value="Nhà phố">Nhà phố liền kề</option>
@@ -736,7 +734,7 @@ const ConsultationFormSection = () => {
                   </div>
 
                   <div>
-                    <label className="block eyebrow text-[#C6A15B] mb-2">
+                    <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
                       Diện Tích Ước Tính (m²)
                     </label>
                     <input
@@ -744,28 +742,28 @@ const ConsultationFormSection = () => {
                       value={formData.area}
                       onChange={(e) => setFormData({ ...formData, area: e.target.value })}
                       placeholder="Ví dụ: 75m²"
-                      className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                      className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] placeholder-[#9CA3AF] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block eyebrow text-[#C6A15B] mb-2">
-                    Ghi Chú Nhu Cầu & Ngân Sách Dự Kiến
+                  <label className="block eyebrow text-[#EDDAA2] text-xs font-semibold mb-2">
+                    Ghi Chú Nhu Cầu &amp; Ngân Sách Dự Kiến
                   </label>
                   <textarea
                     rows={4}
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     placeholder="Mô tả số phòng ngủ, vị trí công trình, ngân sách mong muốn..."
-                    className="w-full bg-[#0A0A0A] border border-[#2A2A2A] px-4 py-3 text-[#F3EFE7] body-md focus:outline-none focus:border-[#C6A15B] transition-colors"
+                    className="w-full bg-[#0A0A0A] border border-[#333] rounded-md px-4 py-3 text-[#F5F1E8] placeholder-[#9CA3AF] body-md focus:outline-none focus:border-[#EDDAA2] transition-colors text-base"
                   />
                 </div>
 
                 <div className="text-center pt-2">
                   <button
                     type="submit"
-                    className="btn-primary button-text w-full sm:w-auto"
+                    className="btn-primary button-text w-full sm:w-auto font-semibold"
                   >
                     {form.submitText}
                   </button>

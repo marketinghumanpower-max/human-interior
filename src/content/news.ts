@@ -20,7 +20,7 @@ export const newsContent = {
     eyebrow: 'BẢN TIN NỘI THẤT CAO CẤP',
     title: {
       normal: 'Nhận Góc Nhìn Kiến Trúc',
-      highlight: 'Hàng Thống',
+      highlight: 'Hàng Tháng',
     },
     description:
       'Đăng ký để nhận các xu hướng thiết kế biệt thự mới nhất, bộ sưu tập vật liệu độc bản và ưu đãi từ Human Interior.',

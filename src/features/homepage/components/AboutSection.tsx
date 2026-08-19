@@ -20,7 +20,7 @@ export const AboutSection = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="relative z-10 py-28 md:py-36 bg-[#080808]/90 border-t border-[#C6A15B]/15 overflow-hidden"
+      className="relative z-10 py-28 md:py-36 bg-[#080808]/90 border-t border-[#C6A15B]/20 overflow-hidden"
       data-scene-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1920&auto=format&fit=crop"
       data-scene-opacity="0.60"
     >
@@ -34,13 +34,13 @@ export const AboutSection = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-5 mb-10 md:mb-0"
           >
-            <span className="eyebrow text-[#C6A15B] mb-3 block">
+            <span className="eyebrow text-[#EDDAA2] text-xs font-semibold mb-3 block">
               {about.eyebrow}
             </span>
 
-            <h2 className="display-lg font-normal text-[#F3EFE7] mb-6 leading-[1.08] tracking-[-0.02em]">
+            <h2 className="display-lg text-[#F5F1E8] mb-6 leading-[1.05] tracking-[-0.005em]">
               {about.title.normal}{' '}
-              <span className="font-display font-normal text-[#F3EFE7]">
+              <span className="text-[#EDDAA2]">
                 {about.title.highlight}
               </span>
               .
@@ -49,7 +49,7 @@ export const AboutSection = () => {
             {about.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="body-md text-[#AAA49A] mb-6 font-normal"
+                className="body-md text-[#D1D5DB] mb-6 font-normal leading-relaxed"
               >
                 {p}
               </p>
@@ -57,7 +57,7 @@ export const AboutSection = () => {
 
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 button-text text-[#C6A15B] hover:text-[#F3EFE7] transition-colors group"
+              className="inline-flex items-center gap-2 button-text text-[#EDDAA2] hover:text-[#FFFFFF] font-semibold transition-colors group"
             >
               {about.action}{' '}
               <span className="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-1">
@@ -74,7 +74,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="md:col-span-6 md:col-start-7"
           >
-            <div className="relative aspect-square overflow-hidden group border border-[#C6A15B]/25 rounded-none shadow-2xl">
+            <div className="relative aspect-square overflow-hidden group border border-[#C6A15B]/30 rounded-none shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=90&w=1600&auto=format&fit=crop"
                 alt={about.imageAlt}
@@ -86,7 +86,7 @@ export const AboutSection = () => {
                 className="object-cover w-full h-full opacity-90 transition-transform duration-1000 group-hover:scale-105"
               />
               <div
-                className="absolute -inset-4 border border-[#C6A15B]/30 -z-10 translate-x-4 translate-y-4 pointer-events-none transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"
+                className="absolute -inset-4 border border-[#C6A15B]/40 -z-10 translate-x-4 translate-y-4 pointer-events-none transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"
               />
             </div>
           </motion.div>

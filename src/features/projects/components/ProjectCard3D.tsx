@@ -209,7 +209,7 @@ export const ProjectCard3D: React.FC<ProjectCard3DProps> = ({ project, onSelect 
               <span>{project.area}</span>
             </div>
 
-            <h3 className="font-display text-xl sm:text-2xl text-[#F3EFE7] group-hover:text-[#DEC27B] transition-colors leading-snug font-normal mb-2 line-clamp-1 tracking-[-0.015em]">
+            <h3 className="card-title text-xl sm:text-2xl text-[#F3EFE7] group-hover:text-[#DEC27B] transition-colors mb-2 line-clamp-1">
               {project.title}
             </h3>
 

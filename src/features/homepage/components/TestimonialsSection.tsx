@@ -6,7 +6,7 @@ export const TestimonialsSection = () => {
 
   return (
     <section
-      className="relative z-10 py-28 md:py-36 bg-[#1b1c19]/90 border-y border-[#9a8f80]/10 overflow-hidden"
+      className="relative z-10 py-28 md:py-36 bg-[#0E0E0E]/95 border-y border-[#C6A15B]/20 overflow-hidden"
       data-scene-image="https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1920&auto=format&fit=crop"
       data-scene-opacity="0.45"
     >
@@ -18,7 +18,7 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="eyebrow text-[#C6A15B] block">
+          <span className="eyebrow text-[#EDDAA2] text-xs font-semibold block uppercase tracking-[0.2em]">
             {testimonials.eyebrow}
           </span>
         </motion.div>
@@ -28,24 +28,24 @@ export const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="glass-panel p-8 md:p-12 relative mt-6 rounded-sm"
+          className="glass-panel p-8 md:p-14 relative mt-6 rounded-lg border border-[#C6A15B]/30 shadow-2xl"
         >
           <span
-            className="material-symbols-outlined text-[#C6A15B]/20 text-7xl md:text-8xl absolute top-4 left-4 -z-10 select-none pointer-events-none"
+            className="material-symbols-outlined text-[#EDDAA2]/25 text-7xl md:text-8xl absolute top-4 left-4 -z-10 select-none pointer-events-none"
             style={{ fontVariationSettings: "'FILL' 1" }}
           >
             format_quote
           </span>
 
-          <p className="body-lg text-[#F3EFE7] leading-[1.65] mb-8 font-normal">
+          <p className="body-lg text-lg md:text-2xl text-[#F5F1E8] leading-[1.7] mb-8 font-normal">
             {testimonials.quote}
           </p>
 
           <div>
-            <h4 className="font-display text-lg font-normal text-[#F3EFE7] tracking-[-0.015em]">
+            <h4 className="font-sans text-xl md:text-2xl text-[#FFFFFF] font-bold tracking-wide">
               {testimonials.author}
             </h4>
-            <span className="eyebrow text-[#C6A15B] block mt-1">
+            <span className="eyebrow text-[#EDDAA2] text-xs md:text-sm font-semibold block mt-1.5 uppercase tracking-[0.16em]">
               {testimonials.role}
             </span>
           </div>
@@ -54,4 +54,3 @@ export const TestimonialsSection = () => {
     </section>
   )
 }
-

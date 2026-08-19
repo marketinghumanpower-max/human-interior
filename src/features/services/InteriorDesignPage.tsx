@@ -81,7 +81,7 @@ const HeroSection = () => {
           </span>
         </AnimatedSection>
         <AnimatedSection delay={100}>
-          <h1 className="display-lg font-normal text-[#F3EFE7] leading-[1.08] mb-4 tracking-[-0.025em]">
+          <h1 className="display-lg text-[#F3EFE7] leading-[0.98] mb-4 tracking-[-0.01em]">
             {hero.title}
           </h1>
         </AnimatedSection>
@@ -126,7 +126,7 @@ const IntroSection = () => {
             <span className="inline-block eyebrow text-[#C6A15B] mb-4">
               {intro.eyebrow}
             </span>
-            <h2 className="display-lg text-[#F3EFE7] leading-[1.1] mb-8 font-normal tracking-[-0.02em]">
+            <h2 className="display-lg text-[#F3EFE7] leading-[1] mb-8 tracking-[-0.005em]">
               {intro.title}
             </h2>
             {intro.paragraphs.map((p, i) => (
@@ -147,7 +147,7 @@ const IntroSection = () => {
                   key={i}
                   className="bg-[#111] p-8 text-center hover:bg-[#151515] transition-colors duration-500"
                 >
-                  <span className="block display-lg text-[#DEC27B] mb-2 font-normal">
+                  <span className="block display-lg text-[#DEC27B] mb-2">
                     {stat.number}
                   </span>
                   <span className="eyebrow text-[#8A8478]">
@@ -193,7 +193,7 @@ const ProjectGallery = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-4">
             DỰ ÁN NỔI BẬT
           </span>
-          <h2 className="display-lg text-[#F3EFE7] leading-[1.1] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] leading-[1] mb-3 tracking-[0.01em] uppercase">
             Mẫu Thiết Kế Nội Thất
           </h2>
           <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
@@ -261,7 +261,7 @@ const ProjectGallery = () => {
                   </div>
                   {/* Title overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="heading-md font-normal text-[#F3EFE7] leading-tight mb-1 tracking-[-0.01em]">
+                    <h3 className="card-title text-[#F3EFE7] text-xl mb-1">
                       {project.title}
                     </h3>
                     <p className="caption text-[#C6A15B]/70">
@@ -338,7 +338,7 @@ const CTASection = () => {
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <AnimatedSection>
-          <h2 className="display-lg text-[#F3EFE7] leading-[1.1] mb-5 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] leading-[1] mb-5 tracking-[-0.005em]">
             {cta.title}
           </h2>
           <p className="body-md text-[#AAA49A] mb-10 font-normal">
