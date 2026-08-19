@@ -182,7 +182,7 @@ export const Article3DMaterialViewer: React.FC<Article3DMaterialViewerProps> = (
               MÔ PHỎNG VẬT LIỆU 3D INTERACTIVE
             </span>
           </div>
-          <h4 className="font-display text-sm font-normal text-[#F3EFE7] mt-1 tracking-[-0.01em]">
+          <h4 className="card-title text-sm text-[#F3EFE7] mt-1">
             Xoay &amp; Quan Sát Chi Tiết Bề Mặt 360°
           </h4>
         </div>

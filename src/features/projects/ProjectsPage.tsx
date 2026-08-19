@@ -263,7 +263,7 @@ export const ProjectsPage: React.FC = () => {
 
                           <h3
                             onClick={() => handleSelectCard(project, item)}
-                            className="heading-md text-lg text-[#F3EFE7] group-hover:text-[#DEC27B] transition-colors cursor-pointer font-normal line-clamp-1 mb-1.5 tracking-[-0.01em]"
+                            className="card-title text-lg text-[#F3EFE7] group-hover:text-[#DEC27B] transition-colors cursor-pointer line-clamp-1 mb-1.5"
                           >
                             {item.name}
                           </h3>
@@ -276,7 +276,7 @@ export const ProjectsPage: React.FC = () => {
                         {/* Price & Action Button */}
                         <div className="pt-3 border-t border-[#C6A15B]/15 flex items-center justify-between">
                           <div>
-                            <span className="font-display text-base font-normal text-[#DEC27B] block">
+                            <span className="font-display text-base font-medium text-[#DEC27B] block">
                               {item.price}
                             </span>
                             {item.originalPrice && (
@@ -306,7 +306,7 @@ export const ProjectsPage: React.FC = () => {
                 className="text-center py-20 bg-[#0D0D0C] border border-[#C6A15B]/20 p-8 max-w-lg mx-auto font-body"
               >
                 <div className="text-[#C6A15B] text-4xl mb-4">🛍️</div>
-                <h3 className="heading-md font-normal text-[#F3EFE7] mb-2 tracking-[-0.015em]">
+                <h3 className="heading-md text-[#F3EFE7] mb-2">
                   {projectsContent.filterBar.emptyFurniture.title}
                 </h3>
                 <p className="body-md text-[#AAA49A] mb-6 font-normal">
@@ -337,18 +337,18 @@ export const ProjectsPage: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="eyebrow text-[#C6A15B] block mb-3">
+            <span className="eyebrow text-[#EDDAA2] text-xs font-semibold block mb-3 uppercase tracking-[0.18em]">
               {projectsContent.ctaBanner.eyebrow}
             </span>
-            <h2 className="display-lg font-normal text-[#F3EFE7] mb-6 leading-tight tracking-[-0.02em]">
-              {projectsContent.ctaBanner.title.normal} <span className="text-[#C6A15B] font-display font-normal">{projectsContent.ctaBanner.title.highlight}</span>?
+            <h2 className="display-lg text-[#F5F1E8] mb-6 leading-tight tracking-[-0.005em]">
+              {projectsContent.ctaBanner.title.normal} <span className="text-[#EDDAA2]">{projectsContent.ctaBanner.title.highlight}</span>?
             </h2>
-            <p className="body-lg text-[#AAA49A] font-normal max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="body-lg text-[#D1D5DB] font-normal max-w-2xl mx-auto mb-8 leading-relaxed text-base md:text-lg">
               {projectsContent.ctaBanner.description}
             </p>
             <a
               href="/#contact"
-              className="btn-primary button-text inline-flex items-center gap-3"
+              className="btn-primary button-text inline-flex items-center gap-3 font-semibold"
             >
               <span>{projectsContent.ctaBanner.action}</span>
               <span>→</span>

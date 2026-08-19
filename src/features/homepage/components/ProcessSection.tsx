@@ -22,7 +22,7 @@ export const ProcessSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="display-lg font-normal text-[#F3EFE7] tracking-[-0.02em] leading-[1.08]">
+          <h2 className="display-lg text-[#F5F1E8] tracking-[0.01em] uppercase leading-[1.05]">
             {process.title}
           </h2>
         </motion.div>
@@ -66,14 +66,14 @@ export const ProcessSection = () => {
                   {/* Mobile Layout: Simple left-aligned */}
                   <div className="md:hidden flex items-start gap-5">
                     {/* Number Circle */}
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-display text-sm font-medium bg-[#C6A15B] text-[#080808]">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-sans text-sm font-bold bg-[#EDDAA2] text-[#080808]">
                       {step.number}
                     </div>
                     <div>
-                      <h3 className="heading-md text-lg font-normal text-[#F3EFE7] mb-2 leading-snug">
+                      <h3 className="card-title text-[#F5F1E8] font-bold text-lg mb-2">
                         {step.title}
                       </h3>
-                      <p className="body-md text-sm leading-[1.65] text-[#AAA49A]">
+                      <p className="body-md text-base leading-[1.7] text-[#D1D5DB] font-normal">
                         {step.description}
                       </p>
                     </div>
@@ -85,10 +85,10 @@ export const ProcessSection = () => {
                     <div className={`flex ${isOdd ? 'justify-end pr-12' : ''}`}>
                       {isOdd ? (
                         <div className="max-w-sm text-right">
-                          <h3 className="heading-md font-normal text-[#F3EFE7] mb-2 leading-snug">
+                          <h3 className="card-title text-[#F5F1E8] font-bold text-xl mb-2">
                             {step.title}
                           </h3>
-                          <p className="body-md text-sm leading-[1.65] text-[#AAA49A]">
+                          <p className="body-md text-base leading-[1.7] text-[#D1D5DB] font-normal">
                             {step.description}
                           </p>
                         </div>
@@ -125,7 +125,7 @@ export const ProcessSection = () => {
                           damping: 20,
                           delay: index * 0.1 + 0.2,
                         }}
-                        className="relative z-10 w-11 h-11 rounded-full flex items-center justify-center font-display text-sm font-medium bg-[#C6A15B] text-[#080808] shadow-[0_0_15px_rgba(198,161,91,0.25)]"
+                        className="relative z-10 w-11 h-11 rounded-full flex items-center justify-center font-sans text-sm font-bold bg-[#EDDAA2] text-[#080808] shadow-[0_0_15px_rgba(198,161,91,0.25)]"
                       >
                         {step.number}
                       </motion.div>
@@ -135,10 +135,10 @@ export const ProcessSection = () => {
                     <div className={`flex ${!isOdd ? 'justify-start pl-12' : ''}`}>
                       {!isOdd ? (
                         <div className="max-w-sm text-left">
-                          <h3 className="heading-md font-normal text-[#F3EFE7] mb-2 leading-snug">
+                          <h3 className="card-title text-[#F5F1E8] font-bold text-xl mb-2">
                             {step.title}
                           </h3>
-                          <p className="body-md text-sm leading-[1.65] text-[#AAA49A]">
+                          <p className="body-md text-base leading-[1.7] text-[#D1D5DB] font-normal">
                             {step.description}
                           </p>
                         </div>

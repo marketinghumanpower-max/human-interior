@@ -142,7 +142,7 @@ const HeroSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <h1 className="display-lg text-[#F3EFE7] font-normal leading-[1.08] mb-4 tracking-[-0.025em]">
+          <h1 className="display-lg text-[#F3EFE7] leading-[0.98] mb-4 tracking-[-0.01em]">
             {hero.title}
           </h1>
         </AnimatedSection>
@@ -182,7 +182,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#262626] border border-[#262626] overflow-hidden rounded-sm shadow-2xl">
             {hero.stats.map((stat, idx) => (
               <div key={idx} className="bg-[#111111] p-6 text-center hover:bg-[#161616] transition-colors duration-300">
-                <span className="block display-lg text-[#DEC27B] font-normal mb-1">
+                <span className="block display-lg text-[#DEC27B] mb-1">
                   {stat.number}
                 </span>
                 <span className="eyebrow text-[#8A8478]">
@@ -213,7 +213,7 @@ const FengShuiCalculatorSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             BỘ TRA CỨU PHONG THỦY THÔNG MINH
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             Tra Cứu Mệnh & Hướng Nhà Theo Năm Sinh
           </h2>
           <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
@@ -278,7 +278,7 @@ const FengShuiCalculatorSection = () => {
                     KẾT QUẢ PHONG THỦY BÁT TRẠCH
                   </span>
                   <div className="flex items-center gap-3">
-                    <h3 className="display-lg text-[#F3EFE7] font-normal tracking-[-0.015em]">
+                    <h3 className="display-lg text-[#F3EFE7]">
                       {result.fateName}
                     </h3>
                     <span className="px-2.5 py-0.5 bg-[#C6A15B]/20 text-[#C6A15B] border border-[#C6A15B]/30 eyebrow">
@@ -321,7 +321,7 @@ const ElementsMatrixSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             {elements.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             {elements.title}
           </h2>
           <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
@@ -372,7 +372,7 @@ const ServicesSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             HẠNG MỤC TƯ VẤN CHUYÊN SÂU
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             Giải Pháp Phong Thủy Tích Hợp Bản Vẽ 3D
           </h2>
         </AnimatedSection>
@@ -382,10 +382,10 @@ const ServicesSection = () => {
             <AnimatedSection key={srv.id} delay={idx * 120}>
               <div className="h-full bg-[#121212] border border-[#222] p-8 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all duration-300">
                 <div>
-                  <span className="display-lg text-[#DEC27B] font-normal block mb-3">
+                  <span className="display-lg text-[#DEC27B] block mb-3">
                     0{idx + 1}.
                   </span>
-                  <h3 className="heading-md text-[#F3EFE7] mb-3 leading-snug font-normal tracking-[-0.015em]">
+                  <h3 className="card-title text-xl text-[#F3EFE7] mb-3">
                     {srv.title}
                   </h3>
                   <p className="body-md text-[#8A8478] mb-6 font-normal">
@@ -421,7 +421,7 @@ const ProcessSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             {process.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             {process.title}
           </h2>
         </AnimatedSection>
@@ -431,10 +431,10 @@ const ProcessSection = () => {
             <AnimatedSection key={st.step} delay={idx * 80}>
               <div className="h-full bg-[#121212] border border-[#222] p-6 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all">
                 <div>
-                  <span className="display-lg text-[#DEC27B] font-normal block mb-4">
+                  <span className="display-lg text-[#DEC27B] block mb-4">
                     {st.step}
                   </span>
-                  <h3 className="heading-md text-base text-[#F3EFE7] mb-2 leading-snug font-normal tracking-[-0.01em]">
+                  <h3 className="card-title text-base text-[#F3EFE7] mb-2">
                     {st.title}
                   </h3>
                   <p className="body-md text-xs text-[#8A8478] font-normal">
@@ -474,7 +474,7 @@ const ConsultationFormSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             {form.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             {form.title}
           </h2>
           <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
@@ -491,7 +491,7 @@ const ConsultationFormSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <h3 className="heading-lg text-[#F3EFE7] font-normal tracking-[-0.015em]">
+                <h3 className="card-title text-2xl text-[#F3EFE7]">
                   Đã Đặt Lịch Thành Công!
                 </h3>
                 <p className="body-md text-[#AAA49A] max-w-md mx-auto font-normal">

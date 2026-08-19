@@ -34,7 +34,7 @@ export const NewsSection = () => {
   return (
     <section
       id="news"
-      className="py-28 md:py-36 relative z-10 bg-[#0A0A0A]/90 overflow-hidden border-t border-[#C6A15B]/15"
+      className="py-28 md:py-36 relative z-10 bg-[#0A0A0A]/95 overflow-hidden border-t border-[#C6A15B]/20"
       data-scene-image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop"
       data-scene-opacity="0.30"
     >
@@ -46,16 +46,16 @@ export const NewsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C6A15B]/30 bg-[#C6A15B]/10 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-[#C6A15B] animate-pulse" />
-            <h2 className="font-body text-[11px] text-[#C6A15B] uppercase tracking-[0.22em] font-medium">
+          <div className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full border border-[#DEC27B]/40 bg-[#C6A15B]/15 backdrop-blur-md">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#EDDAA2] animate-pulse" />
+            <h2 className="font-body text-xs md:text-sm text-[#EDDAA2] uppercase tracking-[0.2em] font-semibold">
               TIN TỨC &amp; TẠP CHÍ NỘI THẤT
             </h2>
           </div>
-          <h3 className="font-display text-3xl md:text-5xl font-normal text-[#F3EFE7] tracking-[-0.02em]">
-            Cập Nhật Xu Hướng <span className="text-[#C6A15B] font-display font-normal">&amp; Di Sản</span>
+          <h3 className="display-lg text-3xl md:text-5xl text-[#F5F1E8]">
+            Cập Nhật Xu Hướng <span className="text-[#EDDAA2]">&amp; Di Sản</span>
           </h3>
-          <p className="font-body text-sm md:text-base text-[#AAA49A] max-w-xl mx-auto font-normal leading-[1.65]">
+          <p className="font-body text-base md:text-lg text-[#D1D5DB] max-w-xl mx-auto font-normal leading-[1.7]">
             Khám phá những góc nhìn kiến trúc chuyên sâu, câu chuyện dự án mới nhất và cảm hứng thiết kế độc bản.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export const NewsSection = () => {
               variants={cardVariants}
               whileHover={{ y: -10, rotateX: 2, rotateY: -2 }}
               style={{ transformStyle: 'preserve-3d' }}
-              className="group bg-[#121212] border border-[#C6A15B]/20 rounded-xl overflow-hidden flex flex-col justify-between transition-all duration-500 shadow-xl hover:border-[#C6A15B]/60 hover:shadow-[0_15px_35px_rgba(198,161,91,0.18)] cursor-pointer"
+              className="group bg-[#141414] border border-[#C6A15B]/30 rounded-xl overflow-hidden flex flex-col justify-between transition-all duration-500 shadow-xl hover:border-[#DEC27B] hover:shadow-[0_15px_35px_rgba(198,161,91,0.22)] cursor-pointer"
               onClick={() => setSelectedArticle(article)}
             >
               <div className="relative h-64 overflow-hidden">
@@ -83,29 +83,29 @@ export const NewsSection = () => {
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/20 to-transparent opacity-80" />
-                <span className="absolute top-4 left-4 font-body text-[11px] uppercase font-medium tracking-[0.2em] text-[#DEC27B] px-3 py-1 bg-[#0A0A0A]/85 border border-[#C6A15B]/40 rounded-full backdrop-blur-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/20 to-transparent opacity-80" />
+                <span className="absolute top-4 left-4 font-body text-xs uppercase font-semibold tracking-[0.18em] text-[#EDDAA2] px-3.5 py-1.5 bg-[#181818]/90 border border-[#DEC27B]/50 rounded-full backdrop-blur-md">
                   {article.category}
                 </span>
-                <span className="absolute bottom-3 right-4 font-body text-[11px] text-[#AAA49A] bg-[#0A0A0A]/80 px-2.5 py-0.5 rounded backdrop-blur-sm font-medium">
+                <span className="absolute bottom-3 right-4 font-body text-xs text-[#E5E7EB] bg-[#181818]/90 px-3 py-1 rounded backdrop-blur-sm font-medium border border-[#444]">
                   {article.readTime}
                 </span>
               </div>
 
               <div className="p-7 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <div className="text-xs text-[#C6A15B] font-body mb-2 font-medium">
+                  <div className="text-xs text-[#EDDAA2] font-body mb-2 font-semibold">
                     {article.publishedAt}
                   </div>
-                  <h4 className="font-display text-xl font-normal text-[#F3EFE7] leading-snug group-hover:text-[#DEC27B] transition-colors line-clamp-2 tracking-[-0.015em]">
+                  <h4 className="card-title text-xl text-[#F5F1E8] leading-snug group-hover:text-[#EDDAA2] transition-colors line-clamp-2">
                     {article.title}
                   </h4>
-                  <p className="font-body text-sm text-[#AAA49A] font-normal leading-[1.65] mt-3 line-clamp-3">
+                  <p className="font-body text-sm md:text-base text-[#D1D5DB] font-normal leading-[1.7] mt-3 line-clamp-3">
                     {article.excerpt}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#C6A15B]/15 flex items-center justify-between font-body text-xs font-medium text-[#C6A15B] uppercase tracking-[0.12em] group-hover:text-[#DEC27B]">
+                <div className="pt-4 border-t border-[#C6A15B]/20 flex items-center justify-between font-body text-xs font-semibold text-[#EDDAA2] uppercase tracking-[0.14em] group-hover:text-[#FFFFFF]">
                   <span>Đọc Chi Tiết</span>
                   <span className="material-symbols-outlined text-sm group-hover:translate-x-1.5 transition-transform">
                     arrow_forward
@@ -137,7 +137,7 @@ export const NewsSection = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedArticle(null)}
-              className="absolute inset-0 bg-[#000000]/85 backdrop-blur-md"
+              className="absolute inset-0 bg-[#000000]/90 backdrop-blur-md"
             />
 
             <motion.div
@@ -145,12 +145,12 @@ export const NewsSection = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-[#101010] border border-[#C6A15B]/40 rounded-xl shadow-2xl p-6 sm:p-10 text-[#F3EFE7] z-10 custom-scrollbar"
+              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-[#141414] border border-[#DEC27B]/50 rounded-xl shadow-2xl p-6 sm:p-10 text-[#F5F1E8] z-10 custom-scrollbar"
             >
               {/* Close Button */}
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#C6A15B]/30 flex items-center justify-center text-[#DEC27B] hover:bg-[#C6A15B] hover:text-[#0A0A0A] transition-colors"
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[#222] border border-[#DEC27B]/40 flex items-center justify-center text-[#EDDAA2] hover:bg-[#DEC27B] hover:text-[#0A0A0A] transition-colors"
                 aria-label="Close"
               >
                 <span className="material-symbols-outlined">close</span>
@@ -158,27 +158,27 @@ export const NewsSection = () => {
 
               {/* Category & Date */}
               <div className="flex flex-wrap items-center gap-3 mb-4 text-xs font-body">
-                <span className="px-3 py-1 rounded-full bg-[#C6A15B]/20 text-[#DEC27B] border border-[#C6A15B]/40 font-medium uppercase tracking-wider">
+                <span className="px-3.5 py-1.5 rounded-full bg-[#C6A15B]/25 text-[#EDDAA2] border border-[#DEC27B]/50 font-semibold uppercase tracking-wider">
                   {selectedArticle.category}
                 </span>
-                <span className="text-[#AAA49A] font-medium">{selectedArticle.publishedAt}</span>
-                <span className="text-[#AAA49A]">•</span>
-                <span className="text-[#AAA49A] font-medium">{selectedArticle.readTime}</span>
+                <span className="text-[#D1D5DB] font-medium">{selectedArticle.publishedAt}</span>
+                <span className="text-[#9CA3AF]">•</span>
+                <span className="text-[#D1D5DB] font-medium">{selectedArticle.readTime}</span>
               </div>
 
               {/* Title */}
-              <h2 className="font-display text-2xl sm:text-4xl font-normal text-[#F3EFE7] leading-tight mb-4 tracking-[-0.02em]">
+              <h2 className="font-display text-2xl sm:text-4xl font-semibold text-[#F5F1E8] leading-tight mb-4 tracking-[-0.02em]">
                 {selectedArticle.title}
               </h2>
 
               {selectedArticle.subtitle && (
-                <p className="font-body text-base sm:text-lg text-[#C6A15B] font-normal mb-6 border-l-2 border-[#C6A15B] pl-4">
+                <p className="font-body text-base sm:text-lg text-[#EDDAA2] font-normal mb-6 border-l-2 border-[#EDDAA2] pl-4">
                   {selectedArticle.subtitle}
                 </p>
               )}
 
               {/* Featured Image */}
-              <div className="relative h-72 sm:h-96 rounded-lg overflow-hidden border border-[#C6A15B]/20 mb-8">
+              <div className="relative h-72 sm:h-96 rounded-lg overflow-hidden border border-[#C6A15B]/30 mb-8">
                 <img
                   src={selectedArticle.featuredImage}
                   alt={selectedArticle.title}
@@ -187,24 +187,24 @@ export const NewsSection = () => {
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center gap-4 mb-8 pb-6 border-b border-[#C6A15B]/15">
+              <div className="flex items-center gap-4 mb-8 pb-6 border-b border-[#C6A15B]/20">
                 <img
                   src={selectedArticle.author.avatar}
                   alt={selectedArticle.author.name}
-                  className="w-12 h-12 rounded-full object-cover border border-[#C6A15B]/40"
+                  className="w-12 h-12 rounded-full object-cover border border-[#DEC27B]/50"
                 />
                 <div>
-                  <div className="font-display text-base text-[#F3EFE7] font-normal">
+                  <div className="font-display text-base text-[#F5F1E8] font-medium">
                     {selectedArticle.author.name}
                   </div>
-                  <div className="font-body text-xs text-[#AAA49A] font-normal">
+                  <div className="font-body text-xs text-[#D1D5DB] font-normal">
                     {selectedArticle.author.role}
                   </div>
                 </div>
               </div>
 
               {/* Article Content Paragraphs */}
-              <div className="space-y-6 text-[#AAA49A] font-body text-base leading-relaxed font-normal">
+              <div className="space-y-6 text-[#D1D5DB] font-body text-base leading-relaxed font-normal">
                 {selectedArticle.content.map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}
@@ -217,7 +217,7 @@ export const NewsSection = () => {
               {selectedArticle.gallery && selectedArticle.gallery.length > 0 && (
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   {selectedArticle.gallery.map((imgUrl, gIdx) => (
-                    <div key={gIdx} className="rounded border border-[#C6A15B]/20 overflow-hidden h-48 sm:h-64">
+                    <div key={gIdx} className="rounded border border-[#C6A15B]/30 overflow-hidden h-48 sm:h-64">
                       <img src={imgUrl} alt={`Gallery ${gIdx}`} className="w-full h-full object-cover" />
                     </div>
                   ))}
@@ -229,7 +229,7 @@ export const NewsSection = () => {
                 <Link
                   to="/news"
                   onClick={() => setSelectedArticle(null)}
-                  className="text-xs font-medium uppercase tracking-wider text-[#C6A15B] hover:text-[#DEC27B]"
+                  className="text-xs font-semibold uppercase tracking-wider text-[#EDDAA2] hover:text-[#FFFFFF]"
                 >
                   Xem thêm nhiều bài viết khác →
                 </Link>
@@ -247,4 +247,3 @@ export const NewsSection = () => {
     </section>
   )
 }
-

@@ -178,10 +178,10 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="display-xl hero-title font-normal text-[#F5F1E8] mb-7 mx-auto leading-[0.98] tracking-[-0.025em] drop-shadow-lg"
+          className="display-xl hero-title text-[#F5F1E8] mb-7 mx-auto leading-[0.95] tracking-[-0.01em] drop-shadow-lg"
         >
-          <span>{hero.title.normal}</span>
-          <span className="font-display font-normal text-[#F5F1E8]">
+          <span className="block">{hero.title.normal}</span>
+          <span className="block text-[#F5F1E8]">
             {hero.title.highlight}
           </span>
         </motion.h1>
@@ -191,7 +191,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="body-lg text-[rgba(255,255,255,0.78)] max-w-[680px] mx-auto mb-9 leading-[1.65] tracking-[-0.005em] drop-shadow-md font-normal"
+          className="body-lg text-[#E5E7EB] max-w-[680px] mx-auto mb-9 leading-[1.7] tracking-[-0.005em] drop-shadow-md font-normal"
         >
           {hero.description}
         </motion.p>

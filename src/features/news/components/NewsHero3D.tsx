@@ -506,7 +506,7 @@ export const NewsHero3D: React.FC<{ onSelectArticle?: (id: string) => void }> = 
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-[460px] sm:h-[500px] lg:h-[540px] cursor-grab active:cursor-grabbing select-none rounded-2xl bg-[#09090C]/90 overflow-hidden border border-[#C6A15B]/30 shadow-[0_0_50px_rgba(198,161,91,0.12)]"
+      className="relative w-full h-[480px] sm:h-[530px] lg:h-[570px] cursor-grab active:cursor-grabbing select-none rounded-2xl bg-[#09090C]/90 overflow-hidden border border-[#C6A15B]/30 shadow-[0_0_50px_rgba(198,161,91,0.12)]"
     >
       {/* 1. TOP HEADER OVERLAY: NEWS TICKER & BADGE */}
       <div className="absolute top-4 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-3 pointer-events-none">
@@ -571,28 +571,30 @@ export const NewsHero3D: React.FC<{ onSelectArticle?: (id: string) => void }> = 
       )}
 
       {/* 4. BOTTOM ACTION CONTROL BAR */}
-      <div className="absolute bottom-4 left-4 right-4 z-20 flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-[#0B0B0E]/90 border border-[#C6A15B]/30 backdrop-blur-lg shadow-2xl">
-        {/* Article Summary Info */}
-        <div className="flex-1 min-w-0 text-left space-y-0.5">
-          <div className="flex items-center gap-2">
-            <span className="font-body text-[10px] font-medium text-[#C6A15B] uppercase tracking-wider px-2 py-0.5 rounded bg-[#C6A15B]/15 border border-[#C6A15B]/30">
+      <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-20 p-3.5 sm:p-4 rounded-xl bg-[#0B0B0E]/95 border border-[#C6A15B]/40 backdrop-blur-lg shadow-2xl space-y-2.5">
+        {/* Row 1: Article Category, Date & Full Title */}
+        <div className="text-left space-y-1">
+          <div className="flex items-center gap-2.5">
+            <span className="font-body text-[10px] sm:text-[11px] font-bold text-[#EDDAA2] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#C6A15B]/20 border border-[#C6A15B]/40 whitespace-nowrap shrink-0">
               {activeArticle.category}
             </span>
-            <span className="font-body text-[11px] text-[#AAA49A] font-medium">{activeArticle.publishedAt}</span>
+            <span className="font-body text-xs text-[#D1D5DB] font-medium whitespace-nowrap shrink-0">
+              {activeArticle.publishedAt}
+            </span>
           </div>
-          <h3 className="font-display text-sm font-normal text-[#F3EFE7] truncate tracking-[-0.01em]">
+          <h3 className="card-title text-sm sm:text-base text-[#F5F1E8] font-bold leading-snug truncate">
             {activeArticle.title}
           </h3>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex items-center gap-2 w-full sm:w-auto font-body">
+        {/* Row 2: Action Buttons */}
+        <div className="flex items-center justify-end gap-2.5 pt-2 border-t border-[#C6A15B]/20 font-body">
           <button
             onClick={handleNext}
             disabled={isFlipping}
-            className="btn-secondary flex-1 sm:flex-none px-4 py-2 text-xs flex items-center justify-center gap-1.5"
+            className="btn-secondary px-3.5 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0"
           >
-            <span className="material-symbols-outlined text-sm">flip</span>
+            <span className="material-symbols-outlined text-xs sm:text-sm">flip</span>
             <span>Lật Trang 3D</span>
           </button>
 
@@ -600,10 +602,10 @@ export const NewsHero3D: React.FC<{ onSelectArticle?: (id: string) => void }> = 
             onClick={() => {
               if (onSelectArticle) onSelectArticle(activeArticle.id)
             }}
-            className="btn-primary flex-1 sm:flex-none px-5 py-2 text-xs flex items-center justify-center gap-1.5"
+            className="btn-primary px-4 py-1.5 sm:px-5 sm:py-2 text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0"
           >
             <span>Đọc Tin Chi Tiết</span>
-            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            <span className="material-symbols-outlined text-xs sm:text-sm">arrow_forward</span>
           </button>
         </div>
       </div>

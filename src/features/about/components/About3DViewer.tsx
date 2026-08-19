@@ -399,7 +399,7 @@ export const About3DViewer: React.FC = () => {
           <span className="font-body text-[11px] font-medium uppercase tracking-[0.22em] text-[#C6A15B] mb-2 block">
             {inspector.eyebrow}
           </span>
-          <h3 className="font-display text-2xl md:text-3xl font-normal text-[#F3EFE7] mb-2 tracking-[-0.015em]">
+          <h3 className="heading-lg text-[#F3EFE7] mb-2">
             {inspector.title}
           </h3>
           <p className="font-body text-sm text-[#AAA49A] font-normal leading-[1.65] tracking-[-0.005em]">

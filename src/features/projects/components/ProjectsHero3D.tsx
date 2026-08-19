@@ -403,7 +403,7 @@ export const ProjectsHero3D: React.FC = () => {
               <span className="text-xs text-[#AAA49A]">Năm {activeProject.year}</span>
             </div>
 
-            <h2 className="font-display text-xl font-normal text-[#F3EFE7] mb-1 leading-snug tracking-[-0.01em]">
+            <h2 className="card-title text-xl text-[#F3EFE7] mb-1">
               {activeProject.title}
             </h2>
 

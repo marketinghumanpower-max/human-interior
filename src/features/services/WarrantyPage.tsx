@@ -83,7 +83,7 @@ const HeroSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <h1 className="display-lg text-[#F3EFE7] font-normal leading-[1.08] mb-4 tracking-[-0.025em]">
+          <h1 className="display-lg text-[#F3EFE7] leading-[0.98] mb-4 tracking-[-0.01em]">
             {hero.title}
           </h1>
         </AnimatedSection>
@@ -123,7 +123,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#262626] border border-[#262626] overflow-hidden rounded-sm shadow-2xl">
             {hero.stats.map((stat, idx) => (
               <div key={idx} className="bg-[#111111] p-6 text-center hover:bg-[#161616] transition-colors duration-300">
-                <span className="block display-lg text-[#DEC27B] font-normal mb-1">
+                <span className="block display-lg text-[#DEC27B] mb-1">
                   {stat.number}
                 </span>
                 <span className="eyebrow text-[#8A8478]">
@@ -149,7 +149,7 @@ const FeaturesSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             CAM KẾT DỊCH VỤ
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             Quyền Lợi Khách Hàng Tại Human Interior
           </h2>
         </AnimatedSection>
@@ -164,7 +164,7 @@ const FeaturesSection = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
                     </svg>
                   </div>
-                  <h3 className="heading-md text-[#F3EFE7] mb-3 leading-snug font-normal tracking-[-0.015em]">
+                  <h3 className="card-title text-xl text-[#F3EFE7] mb-3">
                     {feat.title}
                   </h3>
                   <p className="body-md text-xs text-[#8A8478] leading-relaxed font-normal">
@@ -191,7 +191,7 @@ const ScopeTableSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             BẢNG PHẠM VI BẢO HÀNH
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             Chi Tiết Thời Hạn & Hạng Mục Bảo Hành
           </h2>
         </AnimatedSection>
@@ -236,7 +236,7 @@ const ProcessSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             {process.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             {process.title}
           </h2>
         </AnimatedSection>
@@ -246,10 +246,10 @@ const ProcessSection = () => {
             <AnimatedSection key={st.step} delay={idx * 80}>
               <div className="h-full bg-[#121212] border border-[#222] p-6 flex flex-col justify-between hover:border-[#C6A15B]/50 transition-all">
                 <div>
-                  <span className="display-lg text-[#DEC27B] font-normal block mb-4">
+                  <span className="display-lg text-[#DEC27B] block mb-4">
                     {st.step}
                   </span>
-                  <h3 className="heading-md text-base text-[#F3EFE7] mb-2 leading-snug font-normal tracking-[-0.01em]">
+                  <h3 className="card-title text-base text-[#F3EFE7] mb-2">
                     {st.title}
                   </h3>
                   <p className="body-md text-xs text-[#8A8478] font-normal">
@@ -289,7 +289,7 @@ const FormSection = () => {
           <span className="inline-block eyebrow text-[#C6A15B] mb-3">
             {form.eyebrow}
           </span>
-          <h2 className="display-lg text-[#F3EFE7] mb-3 font-normal tracking-[-0.02em]">
+          <h2 className="display-lg text-[#F3EFE7] mb-3 tracking-[0.01em] uppercase leading-[1]">
             {form.title}
           </h2>
           <p className="body-md text-[#8A8478] max-w-xl mx-auto font-normal">
@@ -306,7 +306,7 @@ const FormSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <h3 className="heading-lg text-[#F3EFE7] font-normal tracking-[-0.015em]">
+                <h3 className="card-title text-2xl text-[#F3EFE7]">
                   Đã Tiếp Nhận Yêu Cầu!
                 </h3>
                 <p className="body-md text-[#AAA49A] max-w-md mx-auto font-normal">
